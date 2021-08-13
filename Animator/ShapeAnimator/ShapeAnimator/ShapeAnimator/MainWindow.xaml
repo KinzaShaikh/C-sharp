@@ -1,0 +1,19 @@
+﻿<Window x:Class="ShapeAnimator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShapeAnimator"
+        mc:Ignorable="d"
+        Title="ShapeAnimator" Height="521.6" Width="800">
+    <Grid Margin="0,0,-0.4,-42.6">
+        <Canvas Name="MyCanvas"  Width="800" Height="450" Background="Black" MouseDown="UIElement_OnMouseDown" Margin="0,0,-6,100.6"   />
+        <Button Content="Step" HorizontalAlignment="Left" Height="32" Margin="355,456,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-1.581,0.125" Click="Button_Click"/>
+        <Button Content="Play" HorizontalAlignment="Left" Height="32" Margin="355,456,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-1.581,0.125" Click="Play_Click"/>
+        <Button Content="Red" HorizontalAlignment="Left" Margin="255,456,0,0" VerticalAlignment="Top" Width="55" RenderTransformOrigin="0.35,1.632" Height="32" Click="Red_Click"/>
+        <Button Content="Blue" HorizontalAlignment="Left" Margin="168,456,0,0" VerticalAlignment="Top" Width="64" Height="32" Click="Blue_Click"/>
+        <Button Content="Green" HorizontalAlignment="Left" Margin="87,456,0,0" VerticalAlignment="Top" Width="53" Height="32" Click="Green_Click"/>
+        <Button Content="Square" HorizontalAlignment="Left" Margin="475,456,0,0" VerticalAlignment="Top" Width="75" Height="32" Click="Square_Click"/>
+        <Button Content="Circle" HorizontalAlignment="Left" Margin="596,459,0,0" VerticalAlignment="Top" Width="75" Height="29" Click="Circle_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,13 @@
+C:\Users\kinza\source\repos\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\EmployeeManagement.exe
+C:\Users\kinza\source\repos\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\EmployeeManagement.deps.json
+C:\Users\kinza\source\repos\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\EmployeeManagement.runtimeconfig.json
+C:\Users\kinza\source\repos\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\EmployeeManagement.runtimeconfig.dev.json
+C:\Users\kinza\source\repos\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\EmployeeManagement.dll
+C:\Users\kinza\source\repos\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\EmployeeManagement.pdb
+C:\Users\kinza\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.AssemblyInfoInputs.cache
+C:\Users\kinza\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.AssemblyInfo.cs
+C:\Users\kinza\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.csproj.CoreCompileInputs.cache
+C:\Users\kinza\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.dll
+C:\Users\kinza\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.pdb
+C:\Users\kinza\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.genruntimeconfig.cache
+C:\Users\kinza\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.csprojAssemblyReference.cache

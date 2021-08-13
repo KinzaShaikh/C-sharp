@@ -1,0 +1,15 @@
+E:\ProjectsFiverr\PlayVideo\PlayVideo\bin\Debug\PlayVideo.exe.config
+E:\ProjectsFiverr\PlayVideo\PlayVideo\bin\Debug\PlayVideo.exe
+E:\ProjectsFiverr\PlayVideo\PlayVideo\bin\Debug\PlayVideo.pdb
+E:\ProjectsFiverr\PlayVideo\PlayVideo\bin\Debug\Interop.WMPLib.dll
+E:\ProjectsFiverr\PlayVideo\PlayVideo\bin\Debug\AxInterop.WMPLib.dll
+E:\ProjectsFiverr\PlayVideo\PlayVideo\obj\Debug\PlayVideo.csprojAssemblyReference.cache
+E:\ProjectsFiverr\PlayVideo\PlayVideo\obj\Debug\Interop.WMPLib.dll
+E:\ProjectsFiverr\PlayVideo\PlayVideo\obj\Debug\AxInterop.WMPLib.dll
+E:\ProjectsFiverr\PlayVideo\PlayVideo\obj\Debug\PlayVideo.csproj.ResolveComReference.cache
+E:\ProjectsFiverr\PlayVideo\PlayVideo\obj\Debug\PlayVideo.Form1.resources
+E:\ProjectsFiverr\PlayVideo\PlayVideo\obj\Debug\PlayVideo.Properties.Resources.resources
+E:\ProjectsFiverr\PlayVideo\PlayVideo\obj\Debug\PlayVideo.csproj.GenerateResource.cache
+E:\ProjectsFiverr\PlayVideo\PlayVideo\obj\Debug\PlayVideo.csproj.CoreCompileInputs.cache
+E:\ProjectsFiverr\PlayVideo\PlayVideo\obj\Debug\PlayVideo.exe
+E:\ProjectsFiverr\PlayVideo\PlayVideo\obj\Debug\PlayVideo.pdb

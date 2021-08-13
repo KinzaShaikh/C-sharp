@@ -1,0 +1,41 @@
+﻿<Window x:Class="Midterm.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Midterm"
+        mc:Ignorable="d"
+        Title="About Us" Height="450" Width="800">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="DeepSkyBlue"/>
+            <GradientStop Color="DeepSkyBlue"  Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Label x:Name="labelHelp" Content="ThANK YOU FOR USING AIRLINE SYSTEM" HorizontalAlignment="Stretch" VerticalAlignment="Center" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White"/>
+       
+        <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Top">
+            <Menu x:Name="MenuMain" HorizontalContentAlignment="Left" DockPanel.Dock="Left" VerticalAlignment="Top" Height="23" HorizontalAlignment="Stretch" FontSize="14" Background="Black" Foreground="#FFFFFDFD" ClipToBounds="True" SnapsToDevicePixels="True" AutomationProperties.IsOffscreenBehavior="Onscreen" OpacityMask="#FFA7A7A7" >
+                <MenuItem x:Name="MenuFile" Header="_File" HorizontalAlignment="Center" VerticalAlignment="Bottom" Padding="10,0,8,0" Background="Black" BorderBrush="Black" BorderThickness="1,1,1,1">
+                    <MenuItem x:Name="MenuNew" Header="_New" Foreground="#FFFFFDFD" Background="Black" BorderBrush="Black" Visibility="Visible"/>
+                    <MenuItem x:Name="MenuSave" Header="_Save" Foreground="#FFFFFDFD" Background="Black" ClipToBounds="True" BorderBrush="Black"/>
+                    <Separator></Separator>
+                    <MenuItem x:Name="QuitMenu" Header="_Quit" Foreground="#FFFFFDFD" Background="Black" ClipToBounds="True" BorderBrush="Black" GotFocus="QuitMenu_GotFocus" LostFocus="QuitMenu_LostFocus" Click="QuitMenu_Click"/>
+                </MenuItem>
+                <MenuItem x:Name="MenuEdit" Header="_Edit" Padding="8,0,8,0" Background="Black" BorderBrush="Black" BorderThickness="1,1,1,1">
+                    <MenuItem x:Name="InsertMenu" Header="_Insert" Background="Black" Foreground="White" BorderBrush="Black" Click="InsertMenu_Click"/>
+                    <MenuItem x:Name="UpdateMenu" Header="_Update" Background="Black" Foreground="White" BorderBrush="Black" Click="UpdateMenu_Click"/>
+                    <MenuItem x:Name="DeleteMenu" Header="_Delete" Background="Black" Foreground="White" BorderBrush="Black" Click="DeleteMenu_Click"/>
+                </MenuItem>
+                <MenuItem x:Name="MenuHomepage" Header="Homepage" Padding="8,0,8,0" Background="Black" BorderBrush="Black" BorderThickness="1,1,1,1">
+                    <MenuItem x:Name="ViewCustomers" Header="View Customers" Background="Black" Foreground="White" BorderBrush="Black" Click="ViewCustomers_Click"/>
+                    <MenuItem x:Name="ViewFlights" Header="View Flights" Background="Black" Foreground="White" BorderBrush="Black" Click="ViewFlights_Click"/>
+                    <MenuItem x:Name="ViewAirlines" Header="View Airlines" Background="Black" Foreground="White" BorderBrush="Black" Click="ViewAirlines_Click"/>
+                    <MenuItem x:Name="ViewPassengers" Header="View Passengers" Background="Black" Foreground="White" BorderBrush="Black" Click="ViewPassengers_Click"/>
+                </MenuItem>
+                <MenuItem x:Name="HelpMenu" Header="_Help" Padding="8,0,8,0" Background="Black" BorderBrush="Black" BorderThickness="1,1,1,1" Click="HelpMenu_Click"/>
+            </Menu>
+        </DockPanel>
+    </Grid>
+</Window>

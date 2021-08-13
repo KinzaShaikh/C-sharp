@@ -1,0 +1,98 @@
+﻿<Window x:Class="Midterm.AirlinesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Midterm"
+        mc:Ignorable="d"
+        Title="Airlines Window" Width="800" Background="Cornsilk"  MinHeight="520" WindowStartupLocation="CenterScreen" Height="405">
+    <Grid Background="DarkOrchid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.ContextMenu>
+            <ContextMenu>
+                <MenuItem Header="Insert" Name="cmInsert" Click="insertBtn_Click"></MenuItem>
+                <MenuItem Header="Update" Name="cmUpdate" Click="updateBtn_Click"></MenuItem>
+                <MenuItem Header="Delete" Name="cmDelete" Click="deleteBtn_Click"></MenuItem>
+            </ContextMenu>
+        </Grid.ContextMenu>
+        <DockPanel HorizontalAlignment="Stretch" Grid.Row="0" Grid.ColumnSpan="2" VerticalAlignment="Top">
+            <Menu x:Name="MenuMain" HorizontalContentAlignment="Left" DockPanel.Dock="Left" VerticalAlignment="Top" Height="23" HorizontalAlignment="Stretch" FontSize="14" Foreground="Black" Background="White" ClipToBounds="True" SnapsToDevicePixels="True" AutomationProperties.IsOffscreenBehavior="Onscreen" OpacityMask="#FFA7A7A7" >
+                <MenuItem x:Name="FileMenu" Header="_File" HorizontalAlignment="Center" VerticalAlignment="Bottom" Padding="10,0,8,0" Foreground="Black" Background="White" BorderBrush="Black" BorderThickness="1,1,1,1">
+                    <MenuItem x:Name="NewMenu" Header="_New" Foreground="Black" Background="White" BorderBrush="Black" GotFocus="Menu_GotFocus" LostFocus="Menu_LostFocus" Visibility="Visible"/>
+                    <MenuItem x:Name="SaveMenu" Header="_Save" Foreground="Black" Background="White" ClipToBounds="True" GotFocus="Menu_GotFocus" LostFocus="Menu_LostFocus" BorderBrush="Black"/>
+                    <Separator></Separator>
+                    <MenuItem x:Name="QuitMenu" Header="_Quit" Foreground="Black" Background="White" ClipToBounds="True" BorderBrush="Black" GotFocus="Menu_GotFocus" LostFocus="Menu_LostFocus" Click="QuitMenu_Click"/>
+                </MenuItem>
+                <MenuItem x:Name="EditMenu" Header="_Edit" Padding="8,0,8,0" Foreground="Black" Background="White" BorderBrush="Black" BorderThickness="1,1,1,1">
+                    <MenuItem x:Name="InsertMenu" Header="_Insert" Foreground="Black" Background="White" GotFocus="Menu_GotFocus" LostFocus="Menu_LostFocus"   BorderBrush="Black" Click="InsertMenu_Click"/>
+                    <MenuItem x:Name="UpdateMenu" Header="_Update" Foreground="Black" Background="White" GotFocus="Menu_GotFocus" LostFocus="Menu_LostFocus"   BorderBrush="Black" Click="UpdateMenu_Click"/>
+                    <MenuItem x:Name="DeleteMenu" Header="_Delete" Foreground="Black" Background="White" GotFocus="Menu_GotFocus" LostFocus="Menu_LostFocus"  BorderBrush="Black" Click="DeleteMenu_Click"/>
+                </MenuItem>
+                <MenuItem x:Name="MenuHomepage" Header="Homepage" Padding="8,0,8,0" Foreground="Black" Background="White" BorderBrush="Black" BorderThickness="1,1,1,1">
+                    <MenuItem x:Name="ViewCustomers" Header="View Customers" Foreground="Black" Background="White" GotFocus="Menu_GotFocus" LostFocus="Menu_LostFocus"   BorderBrush="Black" Click="ViewCustomers_Click"/>
+                    <MenuItem x:Name="ViewFlights" Header="View Flights" Foreground="Black" Background="White" GotFocus="Menu_GotFocus" LostFocus="Menu_LostFocus"   BorderBrush="Black" Click="ViewFlights_Click"/>
+                    <MenuItem x:Name="ViewAirlines" Header="View Airlines" Foreground="Black" Background="White" GotFocus="Menu_GotFocus" LostFocus="Menu_LostFocus"   BorderBrush="Black" Click="ViewAirlines_Click"/>
+                    <MenuItem x:Name="ViewPassengers" Header="View Passengers" Foreground="Black" Background="White" GotFocus="Menu_GotFocus" LostFocus="Menu_LostFocus"  BorderBrush="Black" Click="ViewPassengers_Click"/>
+                </MenuItem>
+                <MenuItem x:Name="HelpMenu" Header="_Help" Padding="8,0,8,0" Foreground="Black" Background="White" BorderBrush="Black" BorderThickness="1,1,1,1" Click="HelpMenu_Click"/>
+            </Menu>
+        </DockPanel>
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <ListBox x:Name="listBoxAirlines" SelectionChanged="listBoxAirlines_SelectionChanged" Loaded="listBoxAirlines_Loaded" Margin="5,5,5,5" ItemsSource="{Binding}" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" Padding="10,10,10,0" FontSize="14" Cursor="Hand" Background="Black" BorderBrush="White" Grid.Column="0" Foreground="White" DisplayMemberPath="Name" SelectedValuePath="ID"/>
+            <Button x:Name="deleteBtn" Content="Delete" Padding="1,10,1,10" FontSize="18" Margin="5,0,5,5" Foreground="Red" Background="White"  BorderBrush="White" BorderThickness="2,2,2,2" ToolTip="Selected Airline is deleted" Click="deleteBtn_Click" Grid.Row="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        </Grid>
+        <Grid x:Name="grdForm" Grid.Column="1" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Content="Airlines Page" FontSize="22" HorizontalAlignment="Stretch" VerticalAlignment="Center" HorizontalContentAlignment="Center" Margin="5,7,10,0" BorderBrush="#FFECFE00" BorderThickness="0,0,0,1" Foreground="White" Grid.ColumnSpan="2">
+                <Label.Background>
+                    <SolidColorBrush Color="Gray" Opacity="0.255"/>
+                </Label.Background>
+            </Label>
+
+            <Label Content="Airline ID: " HorizontalAlignment="Stretch" Foreground="White" Margin="20,5,20,0" Padding="0,5,5,0" VerticalAlignment="Center" VerticalContentAlignment="Bottom" FontSize="15" FontWeight="Bold" FontFamily="Times New Roman" Grid.Row="1" />
+            <TextBox x:Name="textBoxAirID" TextWrapping="Wrap" Margin="20,0,20,0" FontSize="16" ToolTip="Auto generated" Padding="5,0,0,0" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" KeyUp="txt_Keyup"/>
+            <Label Content="Airline Name: " HorizontalAlignment="Stretch" Foreground="White" Margin="20,3,20,0"  FontSize="15" FontWeight="Bold" FontFamily="Times New Roman" Padding="0,5,5,0" Grid.Row="2" VerticalAlignment="Center"/>
+            <TextBox x:Name="textBoxAirName" TextWrapping="Wrap" Margin="20,0,20,0" FontSize="16" Padding="5,0,0,0" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"/>
+            <Label Content="Airplane:" Foreground="White" HorizontalAlignment="Stretch" Margin="20,0,20,0" FontSize="15" FontWeight="Bold" FontFamily="Times New Roman" Padding="0,5,5,0" Grid.Row="3" VerticalAlignment="Center"/>
+            <Label Content="Seats Available:" Foreground="White" HorizontalAlignment="Stretch" Margin="20,0,20,0" FontSize="15" FontWeight="Bold" FontFamily="Times New Roman" Padding="0,5,5,0" Grid.Row="4" VerticalAlignment="Center"/>
+            <TextBox x:Name="textBoxSeats" TextWrapping="Wrap" Margin="20,0,20,0" FontSize="16" Padding="5,0,0,0" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" InputScope="Digits" KeyUp="txt_Keyup"/>
+            <Label Content="Meal Available: " Foreground="White" HorizontalAlignment="Stretch" Margin="20,0,20,0" FontSize="15" FontWeight="Bold" FontFamily="Times New Roman" Padding="0,5,5,0" Grid.Row="5" VerticalAlignment="Center"/>
+            <Button x:Name="insertBtn" Content="Insert" Margin="20,5,20,5" Padding="1,4,1,4" FontSize="16" Foreground="Black" Background="White" BorderThickness="2,2,2,2" BorderBrush="White" Click="insertBtn_Click" Grid.Row="6" Grid.ColumnSpan="2"/>
+            <Button x:Name="updateBtn" Content="Update" Padding="1,4,1,4" FontSize="16" Margin="20,5,20,5" BorderBrush="White" Foreground="Black" Background="White" BorderThickness="2,2,2,2" Click="updateBtn_Click" Grid.Row="7" Grid.ColumnSpan="2"/>
+            <RadioButton x:Name="rbBoeing" Content="Boeing 777" Grid.Column="1" HorizontalAlignment="Left" Margin="5,0,0,0" Grid.Row="3" VerticalAlignment="Center" FontSize="16" Padding="5,-4,0,0" GroupName="Airplane" Foreground="White" Checked="rbPlane_Checked"/>
+            <RadioButton x:Name="rbAirbus" Content="Airbus 320" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontSize="16" GroupName="Airplane" Foreground="White" Padding="4,-4,0,0" Margin="0,0,10,0" Checked="rbPlane_Checked"/>
+            <RadioButton x:Name="rbBmbrdQ" Content="Bombardier Q" Grid.Column="1" HorizontalAlignment="Right" Grid.Row="3" VerticalAlignment="Center" Margin="0,0,10,0" FontSize="16" GroupName="Airplane" Padding="4,-4,0,0" Foreground="White" Checked="rbPlane_Checked"/>
+            <RadioButton x:Name="rbVeg" Content="Salad" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="16" Foreground="White" Padding="4,-4,0,0" Checked="rbMeal_Checked"/>
+            <RadioButton x:Name="rbSushi" Content="Sushi" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" FontSize="16" Foreground="White" Padding="4,-4,0,0" Checked="rbMeal_Checked"/>
+            <RadioButton x:Name="rbChicken" Content="Chicken" Grid.Column="1" HorizontalAlignment="Right" Grid.Row="5" VerticalAlignment="Center" Margin="0,0,10,0" FontSize="16" Foreground="White" Padding="4,-4,0,0" Checked="rbMeal_Checked"/>
+        </Grid>
+
+    </Grid>
+</Window>

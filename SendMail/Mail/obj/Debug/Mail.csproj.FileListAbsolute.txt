@@ -1,0 +1,10 @@
+E:\Semester5\Mail\Mail\bin\Debug\Mail.exe.config
+E:\Semester5\Mail\Mail\bin\Debug\Mail.exe
+E:\Semester5\Mail\Mail\bin\Debug\Mail.pdb
+E:\Semester5\Mail\Mail\obj\Debug\Mail.csprojAssemblyReference.cache
+E:\Semester5\Mail\Mail\obj\Debug\Mail.Form1.resources
+E:\Semester5\Mail\Mail\obj\Debug\Mail.Properties.Resources.resources
+E:\Semester5\Mail\Mail\obj\Debug\Mail.csproj.GenerateResource.cache
+E:\Semester5\Mail\Mail\obj\Debug\Mail.csproj.CoreCompileInputs.cache
+E:\Semester5\Mail\Mail\obj\Debug\Mail.exe
+E:\Semester5\Mail\Mail\obj\Debug\Mail.pdb
